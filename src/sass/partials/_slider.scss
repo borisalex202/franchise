@@ -131,6 +131,23 @@
     &-main {
       overflow: hidden;
 
+      &:hover {
+        .slick {
+          &-slide {
+            &:not(.slick-center) {
+              .st,
+              .hr {
+                @include grayscale('on', 1);
+              }
+              &:hover {
+                .hr {
+                  @include grayscale('off', 0);
+                }
+              }
+            }
+          }
+        }
+      }
      .slick {
        &-list {
          padding: 0 50px;
@@ -143,6 +160,17 @@
          cursor: pointer;
          padding-top: 90px;
 
+         &:hover {
+           .st {
+             @include opacity(0);
+             @include transition-delay(.05s);
+           }
+           .hr {
+             @include opacity(1);
+             @include transition-delay(.2s);
+             @include grayscale('off', 0);
+           }
+         }
          .desc {
            position: absolute;
            top: 0;
@@ -167,9 +195,17 @@
              }
            }
          }
-         img {
-           @include grayscale('on', .6);
-           @include transition($transition);
+         .st {
+           @include transition(all .6s ease-in-out);
+         }
+         .hr {
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           margin: 0 auto;
+           @include opacity(0);
+           @include transition(all .6s ease-in-out);
          }
        }
        &-center {
@@ -178,7 +214,11 @@
          .desc {
            @include opacity(1);
          }
-         img {
+         .st {
+           @include opacity(0);
+         }
+         .hr {
+           @include opacity(1);
            @include grayscale('off', 0);
          }
        }
