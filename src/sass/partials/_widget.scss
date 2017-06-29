@@ -1,0 +1,123 @@
+.widget {
+  &-buy-franchise {
+    padding: 60px 0;
+    text-align: center;
+
+    .title {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 10px;
+      color: #505050;
+    }
+    .description {
+      font-size: 15px;
+      line-height: 19px;
+      margin-bottom: 15px;
+      color: #505050;
+    }
+  }
+  &.contact-me {
+    text-align: center;
+
+    p {
+      font-size: 22px;
+      line-height: 34px;
+
+      small {
+        display: block;
+        font-size: 15px;
+        margin-top: -5px;
+      }
+    }
+    a {
+      font-size: 22px;
+      color: $main-color;
+
+      &.btn {
+        color: #fff;
+        font-size: 12px;
+      }
+    }
+    .indent {
+      margin-bottom: 10px;
+    }
+  }
+  &.text {
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    position: relative;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(#4c4c4c, .6);
+      z-index: 0;
+    }
+    p {
+      position: relative;
+      font-size: 22px;
+      color: #fff;
+      margin-bottom: 40px;
+      z-index: 1;
+    }
+    a {
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: $screen-sm-max) {
+      min-height: 250px;
+
+      p {
+        font-size: 18px;
+        line-height: normal;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &.cont {
+    padding: 60px 40px;
+    background: #fff;
+    border: 1px solid #EAEDF0;
+
+    &.mini {
+      padding: 30px 40px;
+    }
+    @media (max-width: $screen-sm-max) {
+      padding: 50px 20px;
+
+      &.mini {
+        padding: 30px 20px;
+      }
+    }
+  }
+  &.standard {
+    padding: 60px 0;
+
+    &-sides {
+      padding: 60px 40px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 50px 0;
+
+      &-sides {
+        padding: 50px 20px;
+      }
+    }
+  }
+  &.mini {
+    padding: 30px 0;
+  }
+  &.pt-0 {
+    padding-top: 0 !important;
+  }
+}

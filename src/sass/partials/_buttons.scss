@@ -1,0 +1,52 @@
+.btn {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 11px;
+  padding: 12px 25px;
+  border: 0;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  width: auto;
+  @include transition($transition);
+
+  &-default {
+    background: $btn-default-bg;
+    color: #fff;
+
+    &:hover {
+      background: $btn-default-bg-hover;
+      color: #fff;
+    }
+    &:focus,
+    &:active,
+    &:active:hover {
+      background: $btn-default-bg-active;
+      color: #fff;
+    }
+  }
+  &-primary {
+    background: $btn-primary-bg;
+    color: #fff;
+
+    &:hover {
+      background: $btn-primary-bg-hover;
+      color: #fff;
+    }
+    &:focus,
+    &:active,
+    &:active:hover {
+      background: $btn-primary-bg-active;
+      color: #fff;
+    }
+  }
+  @for $btn from 20 through 50 {
+    @if $btn % 2 == 0 {
+      &.btn-#{$btn} {
+        padding-left: $btn#{'px'};
+        padding-right: $btn#{'px'};
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.faq {
+  &-container {
+    max-width: 745px;
+    margin: -6px auto 0;
+    @include flexbox();
+    @include flex-wrap(wrap);
+  }
+  &-item {
+    width: 100%;
+    margin-top: 6px;
+
+    &.active {
+      .faq {
+        &-q {
+          color: $main-color;
+
+          &:after {
+            @include rotate(180deg);
+          }
+        }
+      }
+    }
+    &.with-iq {
+      .faq {
+        &-q {
+          background: url('../img/svg/icon-question.svg') 30px center no-repeat #F6F9FC;
+          line-height: 28px;
+          padding-left: 85px;
+        }
+      }
+    }
+  }
+  &-q {
+    width: 100%;
+    padding: 18px 60px 18px 30px;
+    color: $text-color;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    background: #F6F9FC;
+    position: relative;
+    cursor: pointer;
+    @include transition($transition);
+
+    &:hover {
+      color: $main-color;
+    }
+    &:after {
+      content: '';
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      margin-top: -8px;
+      background: url('../img/svg/icon-arrow-faq.svg') no-repeat;
+      @include transition($transition);
+    }
+  }
+  &-a {
+    width: 100%;
+    padding: 20px 30px;
+    overflow: hidden;
+    @include transition($transition);
+
+    p {
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    &-q {
+      padding: 15px 40px 15px 20px;
+
+      &:after {
+        right: 10px;
+      }
+    }
+  }
+}

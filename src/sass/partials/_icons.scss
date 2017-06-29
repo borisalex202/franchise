@@ -1,0 +1,95 @@
+.icon {
+  @include transition($transition);
+
+  &-menu {
+    margin: 0 auto 15px 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+
+    &.open-nav,
+    &.close-nav {
+      pointer-events: none;
+      @include opacity(0);
+    }
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+    @media (max-width: $screen-xs-max) {
+      left: 20px;
+    }
+  }
+  &-bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: $main-color;
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+  &-address {
+    max-width: 15px;
+    max-height: 15px;
+    color: $main-color;
+  }
+  &-phone {
+    max-width: 9px;
+    max-height: 15px;
+    color: $main-color;
+  }
+  &-facebook {
+    max-width: 11px;
+    max-height: 23px;
+    color: #fff;
+  }
+  &-instagram {
+    max-width: 21px;
+    max-height: 21px;
+    color: #fff;
+  }
+  &-vk {
+    max-width: 25px;
+    max-height: 19px;
+    color: #fff;
+  }
+  &-youtube {
+    max-width: 22px;
+    max-height: 23px;
+    color: #fff;
+  }
+  &-category {
+    max-width: 17px;
+    max-height: 13px;
+    color: #848484;
+  }
+  &-pin {
+    max-width: 18px;
+    max-height: 18px;
+    color: #fff;
+    @include opacity(.7);
+  }
+  &-pag-arrow-next,
+  &-pag-arrow-prev {
+    max-height: 6px;
+    max-width: 6px;
+    position: relative;
+    top: -1px;
+  }
+  &-label {
+    &.date {
+      padding-left: 18px;
+      background: url('../img/svg/icon-date.svg') left center no-repeat;
+    }
+    &.package {
+      padding-left: 20px;
+      background: url('../img/svg/icon-package.svg') left center no-repeat;
+    }
+    &.place {
+      padding-left: 20px;
+      background: url('../img/svg/icon-place.svg') left center no-repeat;
+    }
+  }
+}

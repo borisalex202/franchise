@@ -1,0 +1,9 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="6px" height="6px">
+    <path fill-rule="evenodd"  fill="rgb(132, 132, 132)"
+          d="M3.232,0.001 L1.483,3.000 L3.232,5.999 L1.748,5.999 L-0.001,3.000 L1.748,0.001 L3.232,0.001 Z"/>
+    <path fill-rule="evenodd"  fill="rgb(132, 132, 132)"
+          d="M6.001,0.001 L4.252,3.000 L6.001,5.999 L4.517,5.999 L2.768,3.000 L4.517,0.001 L6.001,0.001 Z"/>
+</svg>

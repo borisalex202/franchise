@@ -1,0 +1,33 @@
+html, body {
+  font-family: $font-family-base;
+  font-size: $font-size;
+  font-weight: 400;
+  min-height: 100%;
+  min-width: 300px;
+  color: $text-color;
+}
+body {
+  background: map_get($bg-colors, 'main');
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+.bg {
+  @each $bg, $color in $bg-colors {
+    &-#{$bg} {
+      background-color: $color;
+    }
+  }
+}
+.fs {
+  &-18 {
+    font-size: 18px;
+  }
+  &-22 {
+    font-size: 22px;
+  }
+  &-24 {
+    font-size: 24px;
+  }
+}

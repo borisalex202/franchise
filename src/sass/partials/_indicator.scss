@@ -1,0 +1,76 @@
+.indicator {
+  &-container {
+    margin: -30px -6px 0;
+    @include flexbox();
+    @include flex-wrap(wrap);
+  }
+  &-item {
+    width: calc(20% - 12px);
+    text-align: center;
+    margin: 30px 6px 0;
+    background: #fff;
+    padding: 30px 15px;
+
+    &.mini {
+      height: 100%;
+    }
+    .icon {
+      margin-bottom: 22px;
+    }
+  }
+  &-title {
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: $text-color;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #acacac;
+      max-width: 120px;
+      height: 1px;
+      margin: 0 auto;
+    }
+  }
+  &-price {
+    color: $main-color;
+    font-size: 22px;
+    font-weight: 500;
+
+    span {
+      font-weight: 700;
+    }
+  }
+  &-list {
+    margin-top: 35px;
+    text-align: left;
+
+    li {
+      font-size: 14px;
+      color: $text-color;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  @media (max-width: $screen-sm-max) {
+    &-container {
+      @include justify-content(center);
+    }
+    &-item {
+      width: calc(33.3333% - 12px);
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    &-item {
+      width: calc(100% - 12px);
+    }
+  }
+}

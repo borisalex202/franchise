@@ -1,0 +1,30 @@
+/* Fonts */
+$font-family-base:             'Roboto', sans-serif;
+$font-size:                    14px;
+
+/* Animation */
+$transition:                   all .3s ease;
+
+/* Main */
+$main-color:                   #159718;
+$text-color:                   #505050;
+
+/* Links */
+$link-color:                   $text-color;
+$link-hover-color:             $main-color;
+
+/* Buttons */
+$btn-default-bg:               $main-color;
+$btn-default-bg-hover:         lighten($btn-default-bg, 5%);
+$btn-default-bg-active:        darken($btn-default-bg, 5%);
+
+$btn-primary-bg:               #818181;
+$btn-primary-bg-hover:         lighten($btn-primary-bg, 5%);
+$btn-primary-bg-active:        darken($btn-primary-bg, 5%);
+
+
+// Background colors
+$bg-colors: (
+    white:                     #fff,
+    main:                      #F6F9FC
+);

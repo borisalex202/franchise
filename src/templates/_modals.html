@@ -1,0 +1,97 @@
+@@if ( context.sell === 'true') {
+    <div class="modal fade" id="sell" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="modal-close" data-dismiss="modal"></button>
+                <div class="heading">Продать франшизу</div>
+                <p>Заполните поля в форме ниже и отправьте заявку. Менеджер перезвонит Вам и расскажет об условиях размещения в каталоге</p>
+                <br>
+                <br>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Имя">
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-input" placeholder="Телефон">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="E-mail">
+                </div>
+                <div class="form-group">
+                    <textarea rows="4" class="form-input" placeholder="Комментарий"></textarea>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-default">Отправить заявку</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@@if ( context.favorites === 'true') {
+<div class="modal fade right" id="favorites" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="modal-close" data-dismiss="modal"></button>
+            <div class="heading">Избранные франшизы</div>
+            <div class="franchise-container favorites">
+                <div class="franchise-item new">
+                    <div class="franchise-main">
+                        <div class="franchise-thumb full" style="background-image: url('img/franchise1.png')">
+                            <img src="img/franchise-logo1.png" alt="" class="franchise-logo">
+                        </div>
+                    </div>
+                    <div class="franchise-content">
+                        <div class="franchise-nav">
+                            <span class="franchise-list"><img src="img/svg/icon-list-mini.svg" alt=""></span>
+                            <span class="franchise-close"><img src="img/svg/icon-close-mini.svg" alt=""></span>
+                        </div>
+                        <div>
+                            <a href="#" class="franchise-title ind">Oranjet</a>
+                            <p class="franchise-description">Туристический дискаунтер</p>
+                        </div>
+                        <span class="price">$ 2 000</span>
+                    </div>
+                </div>
+                <div class="franchise-item new">
+                    <div class="franchise-main">
+                        <div class="franchise-thumb full" style="background-image: url('img/franchise2.png')">
+                            <img src="img/franchise-logo2.png" alt="" class="franchise-logo">
+                        </div>
+                    </div>
+                    <div class="franchise-content">
+                        <div class="franchise-nav">
+                            <span class="franchise-list"><img src="img/svg/icon-list-mini.svg" alt=""></span>
+                            <span class="franchise-close"><img src="img/svg/icon-close-mini.svg" alt=""></span>
+                        </div>
+                        <div>
+                            <a href="#" class="franchise-title ind">Лесенка</a>
+                            <p class="franchise-description">Детский развивающий центр</p>
+                        </div>
+                        <span class="price">$ 2 000</span>
+                    </div>
+                </div>
+                <div class="franchise-item new">
+                    <div class="franchise-main">
+                        <div class="franchise-thumb full" style="background-image: url('img/franchise3.png')">
+                            <img src="img/franchise-logo3.png" alt="" class="franchise-logo">
+                        </div>
+                    </div>
+                    <div class="franchise-content">
+                        <div class="franchise-nav">
+                            <span class="franchise-list"><img src="img/svg/icon-list-mini.svg" alt=""></span>
+                            <span class="franchise-close"><img src="img/svg/icon-close-mini.svg" alt=""></span>
+                        </div>
+                        <div>
+                            <a href="#" class="franchise-title ind">Magnat Hookan</a>
+                            <p class="franchise-description">Кальянная</p>
+                        </div>
+                        <span class="price">$ 2 000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right">
+                <a href="#" class="btn btn-default">Посмотреть</a>
+            </div>
+        </div>
+    </div>
+</div>
+}

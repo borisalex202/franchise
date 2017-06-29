@@ -1,0 +1,234 @@
+.slider {
+  &-partners {
+    padding-top: 30px;
+
+    img {
+      margin: 0 auto;
+      @include grayscale('on', 1);
+      @include transition($transition);
+
+      &:hover {
+        @include grayscale('on', 0);
+      }
+    }
+    .slick {
+      &-track {
+        @include flexbox();
+        @include align-items(center);
+      }
+      &-slide {
+        padding: 0 15px;
+      }
+    }
+  }
+  &-fully {
+    .slick {
+      &-list {
+        padding: 0 25%;
+
+        @media (max-width: 1440px) {
+          padding: 0 20%;
+        }
+        @media (max-width: 1200px) {
+          padding: 0 10%;
+        }
+        @media (max-width: $screen-sm-max) {
+          padding: 0;
+        }
+      }
+      &-slide {
+        margin: 0 2px;
+        position: relative;
+
+        &:not(.slick-active) {
+          cursor: pointer;
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .6);
+            pointer-events: none;
+          }
+        }
+        @media (max-width: $screen-sm-max) {
+          margin: 0;
+        }
+      }
+    }
+  }
+  &-smi,
+  &-franchise {
+    .slick {
+      &-prev {
+        background: url('../img/svg/icon-arrow-gray-prev.svg') no-repeat transparent;
+        background-size: cover;
+        left: -10px;
+        width: 20px;
+        height: 128px;
+      }
+      &-next {
+        background: url('../img/svg/icon-arrow-gray-next.svg') no-repeat transparent;
+        background-size: cover;
+        right: -10px;
+        width: 20px;
+        height: 128px;
+      }
+    }
+  }
+  &-franchise {
+    .franchise-item.big {
+      margin: 0 auto;
+      max-width: 300px;
+      padding: 0 20px;
+    }
+  }
+  &-reviews {
+    .slick {
+      &-prev {
+        background: url('../img/svg/icon-arrow-green-prev.svg') no-repeat transparent;
+        background-size: cover;
+        width: 38px;
+        height: 128px;
+        left: 90px;
+
+        @media (max-width: $screen-sm-max) {
+          left: 0;
+        }
+        @media (max-width: $screen-xs-max) {
+          top: 40%;
+          width: 19px;
+          height: 64px;
+          margin-top: -32px;
+        }
+      }
+      &-next {
+        background: url('../img/svg/icon-arrow-green-next.svg') no-repeat transparent;
+        background-size: cover;
+        width: 38px;
+        height: 128px;
+        right: 90px;
+
+        @media (max-width: $screen-sm-max) {
+          right: 0;
+        }
+        @media (max-width: $screen-xs-max) {
+          top: 40%;
+          width: 19px;
+          height: 64px;
+          margin-top: -32px;
+        }
+      }
+    }
+  }
+  &-team {
+    &-description {
+      margin-top: 45px;
+    }
+    &-main {
+      overflow: hidden;
+
+     .slick {
+       &-list {
+         padding: 0 50px;
+         margin: 0 -50px;
+       }
+       &-slide {
+         margin: 0 -40px;
+         position: relative;
+         z-index: 1;
+         cursor: pointer;
+         padding-top: 90px;
+
+         .desc {
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           text-align: center;
+           max-width: 160px;
+           margin: 0 auto;
+           @include opacity(0);
+           @include transition($transition)
+
+           .team {
+             &-name {
+               color: #000;
+               font-weight: 700;
+               margin-bottom: 12px;
+             }
+             &-position {
+               color: $text-color;
+               font-weight: 400;
+               font-size: 14px;
+             }
+           }
+         }
+         img {
+           @include grayscale('on', .6);
+           @include transition($transition);
+         }
+       }
+       &-center {
+         z-index: 90;
+
+         .desc {
+           @include opacity(1);
+         }
+         img {
+           @include grayscale('off', 0);
+         }
+       }
+     }
+    }
+  }
+}
+.slick {
+  &-slide {
+    outline: none;
+  }
+  &-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -64px;
+    width: 38px;
+    height: 128px;
+    border: 0;
+    background-color: transparent;
+    font-size: 0;
+    z-index: 90;
+    cursor: pointer;
+    @include transition($transition);
+    @include opacity(.4);
+
+    &:hover {
+      @include opacity(1);
+    }
+    @media (max-width: $screen-xs-max) {
+      width: 28.5px;
+      height: 96px;
+      margin-top: -48px;
+    }
+  }
+  &-prev {
+    background: url('../img/svg/icon-arrow-prev.svg') no-repeat transparent;
+    background-size: cover;
+    left: 60px;
+
+    @media (max-width: 1200px) {
+      left: 20px;
+    }
+  }
+  &-next {
+    background: url('../img/svg/icon-arrow-next.svg') no-repeat transparent;
+    background-size: cover;
+    right: 60px;
+
+    @media (max-width: 1200px) {
+      right: 20px;
+    }
+  }
+}

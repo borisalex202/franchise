@@ -1,0 +1,73 @@
+.banner {
+  &-container {
+    margin: -30px -15px 0;
+    @include flexbox();
+    @include flex-wrap(wrap);
+  }
+  &-item {
+    margin: 30px 15px 0;
+    width: calc(50% - 30px);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 270px;
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(center);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(#000, .45);
+      z-index: 1;
+    }
+  }
+  &-title {
+    color: #fff;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  &-subtitle {
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin: 0;
+  }
+  @media (max-width: $screen-sm-max) {
+    &-item {
+      width: 100%;
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    &-container {
+      margin-top: -60px;
+    }
+    &-item {
+      margin-top: 60px;
+      min-height: 250px;
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+    &-title {
+      font-size: 21px;
+    }
+    &-subtitle {
+      font-size: 15px;
+    }
+  }
+}

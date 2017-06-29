@@ -1,0 +1,61 @@
+.modal {
+  &.right {
+    right: -100%;
+    @include transition($transition);
+
+    &.in {
+      right: 0;
+    }
+    .modal {
+      &-dialog {
+        margin: 0 0 0 auto;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        @include translate(0,0);
+      }
+      &-content {
+        border-top: 5px solid $main-color;
+        padding: 30px;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+      @media (max-width: $screen-sm-max) {
+        &-content {
+          padding: 30px 15px;
+        }
+      }
+    }
+  }
+  &-content {
+    border: 0;
+    border-radius: 0;
+    padding: 50px 60px;
+    @include box-shadow(none);
+
+    p {
+      line-height: 18px;
+    }
+  }
+  &-close {
+    border: 0;
+    background: url('../img/svg/icon-close.svg') no-repeat transparent;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 99;
+  }
+  @media (max-width: $screen-xs-max) {
+    &-content {
+      padding: 30px;
+
+      p {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+}
