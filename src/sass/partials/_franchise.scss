@@ -282,6 +282,11 @@
     font-size: 12px;
     cursor: pointer;
     background: url('../img/svg/icon-favorite.svg') left center no-repeat;
+    
+    @media (max-width: $screen-xs-max) {
+      top: calc(100% + 30px);
+      right: 15px;
+    }
   }
   &-label {
     &.x2 {

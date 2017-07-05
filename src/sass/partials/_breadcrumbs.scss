@@ -30,4 +30,14 @@
   @media (max-width: $screen-sm-max) {
     padding: 25px 20px;
   }
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 40px;
+
+    li {
+      line-height: 24px;
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    text-align: center;
+  }
 }
