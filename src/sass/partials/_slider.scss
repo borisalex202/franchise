@@ -161,6 +161,8 @@
          padding-top: 90px;
 
          &:hover {
+           z-index: 9;
+
            .st {
              @include opacity(0);
              @include transition-delay(.05s);
