@@ -31,8 +31,9 @@
     padding: 25px 20px;
   }
   @media (max-width: $screen-xs-max) {
-    margin-bottom: 40px;
-
+    &.add-favorite {
+      margin-bottom: 40px;
+    }
     li {
       line-height: 24px;
     }

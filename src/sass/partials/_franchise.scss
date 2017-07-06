@@ -152,6 +152,9 @@
           border: 3px solid #fff;
           @include box-shadow(0 0 0 1px #EAEDF0);
 
+          &.with-price {
+            padding-bottom: 30px;
+          }
           &.full {
             @media (max-width: $screen-xs-max) {
               min-height: 290px;

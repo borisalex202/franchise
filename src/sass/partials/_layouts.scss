@@ -819,13 +819,13 @@
 }
 .content {
   width: 100%;
-  max-width: calc(100% - 315px - 30px);
+  max-width: calc(100% - 315px - 34px);
   margin: 30px 15px 0;
+  display: inline-block;
+  vertical-align: top;
 
   &-container {
-    margin: -30px -15px;
-    @include flexbox();
-    @include flex-wrap(wrap);
+    margin: -30px 0;
   }
   @media (max-width: $screen-sm-max) {
     max-width: calc(100% - 30px);
@@ -835,13 +835,14 @@
   width: 100%;
   max-width: calc(315px - 30px);
   margin: 30px 15px 0;
+  display: inline-block;
+  vertical-align: top;
 
   @media (max-width: $screen-sm-max) {
     max-width: calc(100% - 30px);
   }
   @media (max-width: $screen-xs-max) {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 15px;
   }
 }
 .youtube {
