@@ -441,13 +441,14 @@
     width: 100%;
     margin-bottom: 35px;
 
-    li {
+    > li {
+      border-bottom: 1px solid #eaedf0;
+      
       a {
         display: block;
         color: $text-color;
         font-size: 14px;
         padding: 18px 0;
-        border-bottom: 1px solid #eaedf0;
 
         &:hover {
           color: $main-color;
@@ -479,6 +480,44 @@
         &:hover {
           color: $main-color;
         }
+      }
+    }
+  }
+  .has-childs {
+    > a {
+      position: relative;
+      display: inline-block !important;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: -12px;
+        right: -50px;
+        width: 23px;
+        height: 20px;
+        background: url('../img/svg/icon-arrow-bottom.svg') no-repeat;
+        background-size: cover;
+        @include transition($transition);
+      }
+    }
+    &.active {
+      > a {
+        &:after {
+          @include rotate(180deg);
+        }
+      }
+    }
+  }
+  .submenu {
+    display: none;
+
+    > li {
+      &:not(:last-child) {
+        border-bottom: 1px solid #eaedf0;
+      }
+      a {
+        padding: 8px 0 8px 20px;
       }
     }
   }

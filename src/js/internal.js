@@ -21,7 +21,8 @@
         packageName: $('.package-name'),
         packageBlock: $('.package-block'),
         categoryBtn: $('.catalog-category-btn'),
-        categoryListItem: $('.catalog-category-list li')
+        categoryListItem: $('.catalog-category-list li'),
+        hasChilds: $('.has-childs')
     };
     var options = {
         documentWidth: $(document).width()
@@ -119,6 +120,12 @@
             && el.has(e.target).length === 0) {
             el.removeClass('active');
         }
+    });
+
+    elements.hasChilds.find('a').on('click', function (e) {
+        e.preventDefault();
+        $(this).parent().toggleClass('active').find('.submenu').slideToggle();
+        return false;
     });
 
 })(jQuery);
