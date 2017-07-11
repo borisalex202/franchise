@@ -443,7 +443,7 @@
 
     > li {
       border-bottom: 1px solid #eaedf0;
-      
+
       a {
         display: block;
         color: $text-color;
@@ -512,6 +512,22 @@
   .submenu {
     display: none;
 
+    &.with-icons {
+     > li {
+       a {
+         padding: 8px 0 8px 55px;
+         position: relative;
+
+         .icon {
+           position: absolute;
+           top: 5px;
+           left: 15px;
+           width: 30px;
+           text-align: center;
+         }
+       }
+     }
+    }
     > li {
       &:not(:last-child) {
         border-bottom: 1px solid #eaedf0;
